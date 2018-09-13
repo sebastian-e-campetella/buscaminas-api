@@ -17,8 +17,8 @@ FactoryGirl.define do
       status :lose
     end
 
-    trait :waiting do
-      status :wainting
+    trait :in_progress do
+      status :in_progress
     end
   end
 end

@@ -15,4 +15,14 @@ RSpec.describe Game, type: :model do
   end
 
 
+  it "#exposed method evaluate" do
+    game = Game.new
+    expect(game.cells.count).to eql(64)
+    first_mine = game.mines.first
+    expect(game.cells[first_mine][:exposed]).to eql(false)
+    expect(game.cells[first_mine][:has_mine]).to eql(true)
+    game.cells[first_mine][:exposed] = true
+    game.save
+    expect(game.status.to_sym).to eql(:lose)
+  end
 end
