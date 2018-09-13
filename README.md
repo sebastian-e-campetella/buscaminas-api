@@ -21,3 +21,4 @@ columnas y minas
    Los frameworks a utilizar serán Ruby on Rails para realizar el servidor, en el cual tengo mayor dominio y uno nuevo para mi: NodeJS para realizar el cliente de este Restful API.
    
    A fin de tener mayor tiempo voy a prescindir de ciertas gemas, va a ser un MVP minimalista.
+   Por el tiempo requerido también voy a dejar de lado en este step la creación de usuarios y sessiones, el juego se creará y consumira en base a el id de juego sin restricciones de usuarios que puedan cambiar su estado.
