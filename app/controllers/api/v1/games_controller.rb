@@ -9,15 +9,15 @@ class Api::V1::GamesController < ApplicationController
   # put
   def flag
     game = Game.find(params[:id])
-    game.cells[params[:cell_id].to_i].has_flag = !game.cells[params[:cell_id].to_i].has_flag if game.cells[params[:cell_id].to_i].present?
+    game.cells[params[:cell_id].to_i][:has_flag] = !game.cells[params[:cell_id].to_i][:has_flag] if game.cells[params[:cell_id].to_i].present?
     render json: game.json_api
   end
 
   def exposed
     game = Game.find(params[:id])
     params[:cell]
-    if( game.cells[params[:cell_id].to_i].present? && !game.cells[params[:cell_id].to_i].exposed)
-      game.cells[params[:cell_id].to_i].exposed = true
+    if( game.cells[params[:cell_id].to_i].present? && !game.cells[params[:cell_id].to_i][:exposed])
+      game.cells[params[:cell_id].to_i][:exposed] = true
     end
     game.save
     render json: game
