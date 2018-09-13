@@ -30,7 +30,6 @@ class Game < ApplicationRecord
 
   def evaluate
     self.status = "lose" if( self.exposed.any?{ |c| c[:has_mine]} )
-    debugger
     self.status = "win" if (self.mine_count == self.non_exposed.count)
   end
 
