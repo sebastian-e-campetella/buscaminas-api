@@ -24,7 +24,7 @@ gem 'puma', '~> 3.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'rack-cors', '1.0.4'
+gem 'rack-cors', '1.0.5'
 gem 'jsonapi-serializers'
 
 gem "loofah", ">= 2.2.3"
